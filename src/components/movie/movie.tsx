@@ -11,11 +11,11 @@ import { MdFavorite } from "react-icons/md";
   title: string;
   year: string;
   poster: string;
+  isMovieInFavorites?: boolean;
 }
 
 interface MovieProps {
   data: MovieData; 
-  unFavorite?: boolean;
 }
 
 const Movie : React.FC<MovieProps> = ({ data }) => {
@@ -46,7 +46,9 @@ const Movie : React.FC<MovieProps> = ({ data }) => {
     }
   };
 
-  const isMovieInFavorites = async ()  => {
+useEffect(() => {
+
+    const isMovieInFavorites = async ()  => {
     try {
       const response = await axios.get(`http://localhost:4000/movies/isInFavorites/${data.title}`);
       console.log(response);
@@ -57,7 +59,6 @@ const Movie : React.FC<MovieProps> = ({ data }) => {
     }
   };
 
-useEffect(() => {
   isMovieInFavorites();
 }, [data.title]);
 
