@@ -11,7 +11,12 @@
         :hover {
             cursor: pointer;
         background-color: #f1f1f1;
+        }
 
+        .card {
+            img {
+                height: 95%;
+            }
         }
     }
 }

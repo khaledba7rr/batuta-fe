@@ -1,5 +1,5 @@
 import React , { useState , useEffect } from 'react';
-import Movie from '../../components/movie/movie.tsx';
+import Movie, { MovieData } from '../../components/movie/movie.tsx';
 
 import axios from 'axios';
 
@@ -9,14 +9,8 @@ import './search.scss';
 
 function Search() {
 
- interface Movie {
-  title: string;
-  year: string;
-  poster: string;
-}
-
   const { movieTitle } = useParams();
-  const [movies, setMovies] = useState<Movie[]>([]);
+  const [movies, setMovies] = useState<MovieData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
@@ -40,7 +34,7 @@ function Search() {
 
   useEffect(() => {
    searchMovies();
-  }, []);
+  }, [movieTitle]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -58,7 +52,7 @@ function Search() {
         <div className='movies-container'>
 
         {movies.map((movie) => (
-          <Movie key={movie.title} {...movie} />
+          <Movie key={movie.title} data={movie} />
         ))}
       </div>
     </div>
