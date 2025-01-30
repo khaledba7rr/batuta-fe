@@ -15,12 +15,11 @@ function Search() {
   const [error, setError] = useState(false);
 
 
-
-
   useEffect(() => {
 
     const searchMovies = async () => {
     try {
+      setError(false);
       const response = await axios.get(`http://localhost:4000/movies/search`, {
         params: { query : movieTitle },
       });
