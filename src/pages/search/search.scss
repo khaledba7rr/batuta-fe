@@ -1,0 +1,17 @@
+.movies-container {
+    margin: 20px 0px;
+    padding: 15px 0px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .movie {
+        display: flex;
+        :hover {
+            cursor: pointer;
+        background-color: #f1f1f1;
+
+        }
+    }
+}
