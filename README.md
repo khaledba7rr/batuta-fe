@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# React Movie Favorites App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **React** application that communicates with a NestJS backend to manage a list of favorite movies. It allows users to:
+- Add movies to their favorites.
+- View all favorite movies.
+- Remove movies from favorites.
 
-## Available Scripts
+The frontend is built using **React** and communicates with the backend via HTTP requests.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Project Overview](#project-overview)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Running the Application](#running-the-application)
+- [Usage](#usage)
+  - [Endpoints](#endpoints)
+  - [UI Walkthrough](#ui-walkthrough)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This React application is designed to interact with a **NestJS** backend to manage movies. Users can:
+- **Add movies** to a list of favorites.
+- **View favorite movies**.
+- **Remove movies** from their list of favorites.
 
-### `npm test`
+The frontend makes API calls to a backend running on port `4000` (configured via `.env` in the backend) to fetch, add, and delete movies from the backend database.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **React**: JavaScript library for building user interfaces.
+- **Axios**: Promise-based HTTP client for making API requests.
+- **React Router**: For managing routing within the application.
+- **CSS**: For styling the app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Follow these steps to set up the application locally.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Clone the repository
 
-### `npm run eject`
+```bash
+git clone URL your-directory
+cd your-directory
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Install node_modules
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 3. Start the project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 4. Application will be ready on localhost 3000
